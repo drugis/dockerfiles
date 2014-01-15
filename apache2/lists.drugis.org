@@ -51,6 +51,7 @@
 	<Directory /var/lib/mailman/archives/>
 		Options Indexes FollowSymLinks
 		AllowOverride None
+		Require all granted
 	</Directory>
 
 	ScriptAlias /cgi-bin/mailman/ /usr/lib/cgi-bin/mailman/
