@@ -19,7 +19,16 @@ RUN chmod +x /usr/local/bin/apache2-fg
 ADD mailman/mailman.data.tar.gz /var/lib/mailman/mailman.data.tar.gz
 RUN cd /var/lib/mailman && tar xzf mailman.data.tar.gz
 RUN rm /var/lib/mailman/mailman.data.tar.gz
+RUN check_perms -f
 
-EXPOSE 80
+RUN echo "drugis.org" > /etc/mailname
+ADD exim4 /etc/exim4
 
-ENTRYPOINT ["/usr/local/bin/apache2-fg"]
+ADD aliases /etc/aliases
+
+ADD start-all.sh /usr/local/bin/start-all
+RUN chmod +x /usr/local/bin/start-all
+
+EXPOSE 80 25
+
+ENTRYPOINT ["/usr/local/bin/start-all"]
