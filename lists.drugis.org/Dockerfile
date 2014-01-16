@@ -13,6 +13,8 @@ RUN ln -s /etc/apache2/mods-available/cgi.load /etc/apache2/mods-enabled/cgi.loa
 ADD apache2-fg.sh /usr/local/bin/apache2-fg
 RUN chmod +x /usr/local/bin/apache2-fg
 
+ADD mailman/mm_cfg.py /etc/mailman/mailman_cfg.py
+
 # If you have an existing mailman configuration, create a TAR of the data using
 # cd /var/lib/mailman && sudo tar -cpvW -f mailman.data.tar ./data ./archives ./lists && sudo gzip mailman.data.tar
 # If not, comment out the below lines:
