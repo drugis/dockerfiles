@@ -1,0 +1,15 @@
+Started by user [8mha:AAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzOEgYu/dLi1CL9vNKcHACFIKlWvwAAAA==[0manonymous
+[EnvInject] - Loading node environment variables.
+Building in workspace /home/jenkins/.jenkins/jobs/Karma/workspace
+Fetching changes from the remote Git repository
+Fetching upstream changes from https://github.com/ConnorStroomberg/mcda-elicitation-web
+Checking out Revision 2fd96dc5686752f3c11ed93e75e70c8191a081bb (origin/develop)
+[EnvInject] - Executing scripts and injecting environment variables after the SCM step.
+[EnvInject] - Injecting as environment variables the properties content 
+$=PHANTOMJS_BIN=/usr/local/bin/phantomjs #or wherever PhantomJS happens to be installed
+
+[EnvInject] - Variables injected successfully.
+Recording test results
+No test report files were found. Configuration error?
+Build step 'Publish JUnit test result report' changed build result to FAILURE
+Finished: FAILURE
