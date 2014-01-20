@@ -1,0 +1,116 @@
+Started by user [8mha:AAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzOEgYu/dLi1CL9vNKcHACFIKlWvwAAAA==[0manonymous
+[EnvInject] - Loading node environment variables.
+Building in workspace /home/jenkins/.jenkins/jobs/Karma/workspace
+Fetching changes from the remote Git repository
+Fetching upstream changes from https://github.com/ConnorStroomberg/mcda-elicitation-web
+Checking out Revision 2fd96dc5686752f3c11ed93e75e70c8191a081bb (origin/develop)
+[EnvInject] - Executing scripts and injecting environment variables after the SCM step.
+[EnvInject] - Injecting as environment variables the properties content 
+PATH=/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin
+PHANTOMJS_BIN=/usr/bin/phantomjs
+
+[EnvInject] - Variables injected successfully.
+[workspace] $ /bin/sh -xe /tmp/hudson4502651093336390040.sh
++ karma start
+[32mINFO [karma]: [39mKarma v0.10.9 server started at http://localhost:9876/
+[32mINFO [launcher]: [39mStarting browser PhantomJS
+[32mINFO [PhantomJS 1.9.0 (Linux)]: [39mConnected on socket k9MqBHN9ZUh7yqY8ZEys
+LOG: [36m['/base/test/unit/controller.js', '/base/test/unit/intervalSwing.js', '/base/test/unit/ordinalSwing.js', '/base/test/unit/partialValueFunction.js', '/base/test/unit/taskDependencies.js'][39m
+PhantomJS 1.9.0 (Linux): Executed 0 of 0[32m SUCCESS[39m (0 secs / 0 secs)
+[1A[2KERROR: [36m'There is no timestamp for base/app/js/controllers/intervalSwing.js!'[39m
+PhantomJS 1.9.0 (Linux): Executed 0 of 0[32m SUCCESS[39m (0 secs / 0 secs)
+[1A[2KERROR: [36m'There is no timestamp for base/app/js/controllers/partialValueFunction.js!'[39m
+PhantomJS 1.9.0 (Linux): Executed 0 of 0[32m SUCCESS[39m (0 secs / 0 secs)
+[1A[2KERROR: [36m'There is no timestamp for base/app/js/controllers.js!'[39m
+PhantomJS 1.9.0 (Linux): Executed 0 of 0[32m SUCCESS[39m (0 secs / 0 secs)
+[1A[2KERROR: [36m'There is no timestamp for base/app/js/services/taskDependencies.js!'[39m
+PhantomJS 1.9.0 (Linux): Executed 0 of 0[32m SUCCESS[39m (0 secs / 0 secs)
+[1A[2KERROR: [36m'There is no timestamp for base/app/js/services/partialValueFunction.js!'[39m
+PhantomJS 1.9.0 (Linux): Executed 0 of 0[32m SUCCESS[39m (0 secs / 0 secs)
+[1A[2KERROR: [36m'There is no timestamp for //ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.js!'[39m
+PhantomJS 1.9.0 (Linux): Executed 0 of 0[32m SUCCESS[39m (0 secs / 0 secs)
+[1A[2KERROR: [36m'There is no timestamp for //cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.1/underscore-min.js!'[39m
+PhantomJS 1.9.0 (Linux): Executed 0 of 0[32m SUCCESS[39m (0 secs / 0 secs)
+[1A[2KERROR: [36m'There is no timestamp for base/app/js/controllers/helpers/wizard.js!'[39m
+PhantomJS 1.9.0 (Linux): Executed 0 of 0[32m SUCCESS[39m (0 secs / 0 secs)
+[1A[2KERROR: [36m'There is no timestamp for base/app/js/controllers/helpers/util.js!'[39m
+PhantomJS 1.9.0 (Linux): Executed 0 of 0[32m SUCCESS[39m (0 secs / 0 secs)
+[1A[2KERROR: [36m'There is no timestamp for base/app/js/lib/patavi.js!'[39m
+PhantomJS 1.9.0 (Linux): Executed 0 of 0[32m SUCCESS[39m (0 secs / 0 secs)
+[1A[2KERROR: [36m'There is no timestamp for base/app/js/controllers/chooseProblem.js!'[39m
+PhantomJS 1.9.0 (Linux): Executed 0 of 0[32m SUCCESS[39m (0 secs / 0 secs)
+[1A[2KERROR: [36m'There is no timestamp for base/app/js/controllers/workspace.js!'[39m
+PhantomJS 1.9.0 (Linux): Executed 0 of 0[32m SUCCESS[39m (0 secs / 0 secs)
+[1A[2KERROR: [36m'There is no timestamp for base/app/js/controllers/overview.js!'[39m
+PhantomJS 1.9.0 (Linux): Executed 0 of 0[32m SUCCESS[39m (0 secs / 0 secs)
+[1A[2KERROR: [36m'There is no timestamp for base/app/js/controllers/scaleRange.js!'[39m
+PhantomJS 1.9.0 (Linux): Executed 0 of 0[32m SUCCESS[39m (0 secs / 0 secs)
+[1A[2KERROR: [36m'There is no timestamp for base/app/js/controllers/ordinalSwing.js!'[39m
+PhantomJS 1.9.0 (Linux): Executed 0 of 0[32m SUCCESS[39m (0 secs / 0 secs)
+[1A[2KERROR: [36m'There is no timestamp for base/app/js/controllers/exactSwing.js!'[39m
+PhantomJS 1.9.0 (Linux): Executed 0 of 0[32m SUCCESS[39m (0 secs / 0 secs)
+[1A[2KERROR: [36m'There is no timestamp for base/app/js/controllers/results.js!'[39m
+PhantomJS 1.9.0 (Linux): Executed 0 of 0[32m SUCCESS[39m (0 secs / 0 secs)
+[1A[2KERROR: [36m'There is no timestamp for base/app/js/lib/autobahn.js!'[39m
+PhantomJS 1.9.0 (Linux): Executed 0 of 0[32m SUCCESS[39m (0 secs / 0 secs)
+[1A[2KERROR: [36m'There is no timestamp for base/app/js/lib/when.js!'[39m
+PhantomJS 1.9.0 (Linux): Executed 0 of 0[32m SUCCESS[39m (0 secs / 0 secs)
+[1A[2KERROR: [36m'There is no timestamp for base/app/js/config.js!'[39m
+PhantomJS 1.9.0 (Linux): Executed 0 of 0[32m SUCCESS[39m (0 secs / 0 secs)
+[1A[2KERROR: [36m'There is no timestamp for //ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js!'[39m
+PhantomJS 1.9.0 (Linux): Executed 0 of 0[32m SUCCESS[39m (0 secs / 0 secs)
+[1A[2KERROR: [36m'There is no timestamp for //cdnjs.cloudflare.com/ajax/libs/nprogress/0.1.2/nprogress.min.js!'[39m
+PhantomJS 1.9.0 (Linux): Executed 0 of 0[32m SUCCESS[39m (0 secs / 0 secs)
+[1A[2KPhantomJS 1.9.0 (Linux): Executed 1 of 48[32m SUCCESS[39m (0 secs / 0.003 secs)
+[1A[2KPhantomJS 1.9.0 (Linux): Executed 2 of 48[32m SUCCESS[39m (0 secs / 0.004 secs)
+[1A[2KPhantomJS 1.9.0 (Linux): Executed 3 of 48[32m SUCCESS[39m (0 secs / 0.004 secs)
+[1A[2KPhantomJS 1.9.0 (Linux): Executed 4 of 48[32m SUCCESS[39m (0 secs / 0.005 secs)
+[1A[2KPhantomJS 1.9.0 (Linux): Executed 5 of 48[32m SUCCESS[39m (0 secs / 0.005 secs)
+[1A[2KPhantomJS 1.9.0 (Linux): Executed 6 of 48[32m SUCCESS[39m (0 secs / 0.005 secs)
+[1A[2KPhantomJS 1.9.0 (Linux): Executed 7 of 48[32m SUCCESS[39m (0 secs / 0.006 secs)
+[1A[2KPhantomJS 1.9.0 (Linux): Executed 8 of 48[32m SUCCESS[39m (0 secs / 0.006 secs)
+[1A[2KPhantomJS 1.9.0 (Linux): Executed 9 of 48[32m SUCCESS[39m (0 secs / 0.006 secs)
+[1A[2KPhantomJS 1.9.0 (Linux): Executed 10 of 48[32m SUCCESS[39m (0 secs / 0.006 secs)
+[1A[2KPhantomJS 1.9.0 (Linux): Executed 11 of 48[32m SUCCESS[39m (0 secs / 0.006 secs)
+[1A[2KPhantomJS 1.9.0 (Linux): Executed 12 of 48[32m SUCCESS[39m (0 secs / 0.007 secs)
+[1A[2KPhantomJS 1.9.0 (Linux): Executed 13 of 48[32m SUCCESS[39m (0 secs / 0.013 secs)
+[1A[2KPhantomJS 1.9.0 (Linux): Executed 14 of 48[32m SUCCESS[39m (0 secs / 0.014 secs)
+[1A[2KPhantomJS 1.9.0 (Linux): Executed 15 of 48[32m SUCCESS[39m (0 secs / 0.015 secs)
+[1A[2KPhantomJS 1.9.0 (Linux): Executed 16 of 48[32m SUCCESS[39m (0 secs / 0.015 secs)
+[1A[2KPhantomJS 1.9.0 (Linux): Executed 17 of 48[32m SUCCESS[39m (0 secs / 0.018 secs)
+[1A[2KPhantomJS 1.9.0 (Linux): Executed 18 of 48[32m SUCCESS[39m (0 secs / 0.018 secs)
+[1A[2KPhantomJS 1.9.0 (Linux): Executed 19 of 48[32m SUCCESS[39m (0 secs / 0.02 secs)
+[1A[2KPhantomJS 1.9.0 (Linux): Executed 20 of 48[32m SUCCESS[39m (0 secs / 0.022 secs)
+[1A[2KPhantomJS 1.9.0 (Linux): Executed 21 of 48[32m SUCCESS[39m (0 secs / 0.023 secs)
+[1A[2KPhantomJS 1.9.0 (Linux): Executed 22 of 48[32m SUCCESS[39m (0 secs / 0.025 secs)
+[1A[2KPhantomJS 1.9.0 (Linux): Executed 23 of 48[32m SUCCESS[39m (0 secs / 0.026 secs)
+[1A[2KPhantomJS 1.9.0 (Linux): Executed 24 of 48[32m SUCCESS[39m (0 secs / 0.028 secs)
+[1A[2KPhantomJS 1.9.0 (Linux): Executed 25 of 48[32m SUCCESS[39m (0 secs / 0.029 secs)
+[1A[2KPhantomJS 1.9.0 (Linux): Executed 26 of 48[32m SUCCESS[39m (0 secs / 0.03 secs)
+[1A[2KPhantomJS 1.9.0 (Linux): Executed 27 of 48[32m SUCCESS[39m (0 secs / 0.031 secs)
+[1A[2KPhantomJS 1.9.0 (Linux): Executed 28 of 48[32m SUCCESS[39m (0 secs / 0.032 secs)
+[1A[2KPhantomJS 1.9.0 (Linux): Executed 29 of 48[32m SUCCESS[39m (0 secs / 0.036 secs)
+[1A[2KPhantomJS 1.9.0 (Linux): Executed 30 of 48[32m SUCCESS[39m (0 secs / 0.038 secs)
+[1A[2KPhantomJS 1.9.0 (Linux): Executed 31 of 48[32m SUCCESS[39m (0 secs / 0.039 secs)
+[1A[2KPhantomJS 1.9.0 (Linux): Executed 32 of 48[32m SUCCESS[39m (0 secs / 0.041 secs)
+[1A[2KPhantomJS 1.9.0 (Linux): Executed 33 of 48[32m SUCCESS[39m (0 secs / 0.042 secs)
+[1A[2KPhantomJS 1.9.0 (Linux): Executed 34 of 48[32m SUCCESS[39m (0 secs / 0.044 secs)
+[1A[2KPhantomJS 1.9.0 (Linux): Executed 35 of 48[32m SUCCESS[39m (0 secs / 0.045 secs)
+[1A[2KPhantomJS 1.9.0 (Linux): Executed 36 of 48[32m SUCCESS[39m (0 secs / 0.046 secs)
+[1A[2KPhantomJS 1.9.0 (Linux): Executed 37 of 48[32m SUCCESS[39m (0 secs / 0.047 secs)
+[1A[2KPhantomJS 1.9.0 (Linux): Executed 38 of 48[32m SUCCESS[39m (0 secs / 0.048 secs)
+[1A[2KPhantomJS 1.9.0 (Linux): Executed 39 of 48[32m SUCCESS[39m (0 secs / 0.049 secs)
+[1A[2KPhantomJS 1.9.0 (Linux): Executed 40 of 48[32m SUCCESS[39m (0 secs / 0.049 secs)
+[1A[2KPhantomJS 1.9.0 (Linux): Executed 41 of 48[32m SUCCESS[39m (0 secs / 0.049 secs)
+[1A[2KPhantomJS 1.9.0 (Linux): Executed 42 of 48[32m SUCCESS[39m (0 secs / 0.05 secs)
+[1A[2KPhantomJS 1.9.0 (Linux): Executed 43 of 48[32m SUCCESS[39m (0 secs / 0.051 secs)
+[1A[2KPhantomJS 1.9.0 (Linux): Executed 44 of 48[32m SUCCESS[39m (0 secs / 0.051 secs)
+[1A[2KPhantomJS 1.9.0 (Linux): Executed 45 of 48[32m SUCCESS[39m (0 secs / 0.053 secs)
+[1A[2KPhantomJS 1.9.0 (Linux): Executed 46 of 48[32m SUCCESS[39m (0 secs / 0.058 secs)
+[1A[2KPhantomJS 1.9.0 (Linux): Executed 47 of 48[32m SUCCESS[39m (0 secs / 0.059 secs)
+[1A[2KPhantomJS 1.9.0 (Linux): Executed 48 of 48[32m SUCCESS[39m (0 secs / 0.061 secs)
+[1A[2KPhantomJS 1.9.0 (Linux): Executed 48 of 48[32m SUCCESS[39m (0.356 secs / 0.061 secs)
+Recording test results
+Jabber notifier plugin: Sending notification to: c.stroomberg@gmail.com
+Jabber notifier plugin: [ERROR] not connected. Cannot send message to 'c.stroomberg@gmail.com'
+Finished: SUCCESS

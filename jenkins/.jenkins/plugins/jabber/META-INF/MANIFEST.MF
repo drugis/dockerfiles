@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: kutzi
+Build-Jdk: 1.6.0_26
+Extension-Name: jabber
+Implementation-Title: jabber
+Implementation-Version: 1.25
+Plugin-Class: hudson.plugins.jabber.im.transport.JabberPluginImpl
+Group-Id: org.jvnet.hudson.plugins
+Short-Name: jabber
+Long-Name: Jenkins Jabber notifier plugin
+Url: http://wiki.jenkins-ci.org/display/JENKINS/Jabber+Plugin
+Plugin-Version: 1.25
+Hudson-Version: 1.466
+Jenkins-Version: 1.466
+Plugin-Dependencies: analysis-core:1.0;resolution:=optional,ci-game:1.
+ 16;resolution:=optional,instant-messaging:1.24
+Plugin-Developers: Christoph Kutzinski:kutzi:kutzi@gmx.de
+

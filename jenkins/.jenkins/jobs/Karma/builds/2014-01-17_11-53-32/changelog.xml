@@ -1,0 +1,9 @@
+commit 2fd96dc5686752f3c11ed93e75e70c8191a081bb
+tree a87e3d3335e7c465c4aac0d09d46b4b8ca1330e4
+parent 5fea778c784e213ef7ab9e3c8154e7481f6c2f71
+author Connor Stroomberg <c.stroomberg@gmail.com> 1389959455 +0100
+committer Connor Stroomberg <c.stroomberg@gmail.com> 1389959455 +0100
+
+    edit karma config to use phantonjs for use on CI server
+
+:100644 100644 4688f5920857947b6f1f90b6746d09d6ada77158 e6c3b21d2f6e216b3a574b24347fa0c526e6a204 M	karma.conf.js

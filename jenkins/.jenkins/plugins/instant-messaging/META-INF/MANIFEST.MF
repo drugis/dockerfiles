@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: kutzi
+Build-Jdk: 1.7.0_25
+Extension-Name: instant-messaging
+Implementation-Title: instant-messaging
+Implementation-Version: 1.28
+Group-Id: org.jvnet.hudson.plugins
+Short-Name: instant-messaging
+Long-Name: Jenkins instant-messaging plugin
+Url: http://wiki.jenkins-ci.org/display/JENKINS/Instant+Messaging+Plugin
+Plugin-Version: 1.28
+Hudson-Version: 1.466
+Jenkins-Version: 1.466
+Plugin-Dependencies: analysis-core:1.0;resolution:=optional,ci-game:1.
+ 16;resolution:=optional
+Plugin-Developers: Christoph Kutzinski:kutzi:kutzi@gmx.de,Kohsuke Kawa
+ guchi:kohsuke:kk@kohsuke.org
+

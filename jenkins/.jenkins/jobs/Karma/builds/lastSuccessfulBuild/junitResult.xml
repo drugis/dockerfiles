@@ -1,0 +1,366 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<result>
+  <suites>
+    <suite>
+      <file>/home/jenkins/.jenkins/jobs/Karma/workspace/test-results.xml</file>
+      <name>PhantomJS 1.9.0 (Linux)</name>
+      <stdout>PhantomJS 1.9.0 (Linux) LOG: LOG
+ [&apos;/base/test/unit/controller.js&apos;, &apos;/base/test/unit/intervalSwing.js&apos;, &apos;/base/test/unit/ordinalSwing.js&apos;, &apos;/base/test/unit/partialValueFunction.js&apos;, &apos;/base/test/unit/taskDependencies.js&apos;],PhantomJS 1.9.0 (Linux) LOG: ERROR
+ &apos;There is no timestamp for base/app/js/controllers/intervalSwing.js!&apos;,PhantomJS 1.9.0 (Linux) LOG: ERROR
+ &apos;There is no timestamp for base/app/js/controllers/partialValueFunction.js!&apos;,PhantomJS 1.9.0 (Linux) LOG: ERROR
+ &apos;There is no timestamp f
+...[truncated 1555 chars]...
+LOG: ERROR
+ &apos;There is no timestamp for base/app/js/config.js!&apos;,PhantomJS 1.9.0 (Linux) LOG: ERROR
+ &apos;There is no timestamp for base/app/js/lib/autobahn.js!&apos;,PhantomJS 1.9.0 (Linux) LOG: ERROR
+ &apos;There is no timestamp for base/app/js/lib/when.js!&apos;,PhantomJS 1.9.0 (Linux) LOG: ERROR
+ &apos;There is no timestamp for //ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js!&apos;,PhantomJS 1.9.0 (Linux) LOG: ERROR
+ &apos;There is no timestamp for //cdnjs.cloudflare.com/ajax/libs/nprogress/0.1.2/nprogress.min.js!&apos;
+</stdout>
+      <stderr></stderr>
+      <duration>0.068999976</duration>
+      <timestamp>2014-01-17T13:59:39</timestamp>
+      <id>0</id>
+      <cases>
+        <case>
+          <duration>0.007</duration>
+          <className>PhantomJS 1.9.0 (Linux).TaskDependencies service Dependency description: scale-ranges</className>
+          <testName>isPresent() checks whether scale ranges are defined in the problem</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.004</duration>
+          <className>PhantomJS 1.9.0 (Linux).TaskDependencies service Dependency description: scale-ranges</className>
+          <testName>remove() generates a new state with scale ranges removed</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.0</duration>
+          <className>PhantomJS 1.9.0 (Linux).TaskDependencies service Dependency description: partial-value-functions</className>
+          <testName>isPresent() checks whether partial value functions are defined in the problem</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.002</duration>
+          <className>PhantomJS 1.9.0 (Linux).TaskDependencies service Dependency description: partial-value-functions</className>
+          <testName>remove() generates a new state with partial value functions removed</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.0</duration>
+          <className>PhantomJS 1.9.0 (Linux).TaskDependencies service Dependency description: criteria-trade-offs</className>
+          <testName>isPresent() checks whether prefs are present</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.0</duration>
+          <className>PhantomJS 1.9.0 (Linux).TaskDependencies service Dependency description: criteria-trade-offs</className>
+          <testName>remove() generates a new state with prefs removed</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.0</duration>
+          <className>PhantomJS 1.9.0 (Linux).TaskDependencies service Dependency description: non-ordinal-preferences</className>
+          <testName>isPresent() checks whether non-ordinal prefs are present</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.001</duration>
+          <className>PhantomJS 1.9.0 (Linux).TaskDependencies service Dependency description: non-ordinal-preferences</className>
+          <testName>remove() generates a new state with non-ordinal prefs removed</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.0</duration>
+          <className>PhantomJS 1.9.0 (Linux).TaskDependencies service Dependency description: complete-criteria-ranking</className>
+          <testName>isPresent() checks whether ordinal prefs are present (which currently always implies a full ranking)</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.0</duration>
+          <className>PhantomJS 1.9.0 (Linux).TaskDependencies service Dependency description: complete-criteria-ranking</className>
+          <testName>remove() generates a new state with ordinal prefs removed</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.0</duration>
+          <className>PhantomJS 1.9.0 (Linux).TaskDependencies service</className>
+          <testName>isSafe checks if the task can be entered without destroying existing information</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.0</duration>
+          <className>PhantomJS 1.9.0 (Linux).TaskDependencies service</className>
+          <testName>remove() uses definition.remove() to destroy existing information</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.006</duration>
+          <className>PhantomJS 1.9.0 (Linux).IntervalSwingHandler initialize</className>
+          <testName>should start comparing the first two criteria</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.001</duration>
+          <className>PhantomJS 1.9.0 (Linux).IntervalSwingHandler initialize</className>
+          <testName>should sort the worst and best values</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.001</duration>
+          <className>PhantomJS 1.9.0 (Linux).IntervalSwingHandler initialize</className>
+          <testName>should make best() and worst() functions of choice</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.001</duration>
+          <className>PhantomJS 1.9.0 (Linux).IntervalSwingHandler initialize</className>
+          <testName>should set the progress information</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.003</duration>
+          <className>PhantomJS 1.9.0 (Linux).IntervalSwingHandler validChoice</className>
+          <testName>should check that lower &lt; upper</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.001</duration>
+          <className>PhantomJS 1.9.0 (Linux).IntervalSwingHandler validChoice</className>
+          <testName>should check that the choice is contained in the scale range</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.001</duration>
+          <className>PhantomJS 1.9.0 (Linux).IntervalSwingHandler nextState</className>
+          <testName>should transition to the next two criteria</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.002</duration>
+          <className>PhantomJS 1.9.0 (Linux).IntervalSwingHandler nextState</className>
+          <testName>should transition to done when criteria run out</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.001</duration>
+          <className>PhantomJS 1.9.0 (Linux).IntervalSwingHandler nextState</className>
+          <testName>should set the title</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.002</duration>
+          <className>PhantomJS 1.9.0 (Linux).IntervalSwingHandler nextState</className>
+          <testName>should store the preference information</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.001</duration>
+          <className>PhantomJS 1.9.0 (Linux).IntervalSwingHandler nextState</className>
+          <testName>should sort the worst and best values</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.002</duration>
+          <className>PhantomJS 1.9.0 (Linux).OrdinalSwingHandler initialize</className>
+          <testName>should be described as ordinal</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.001</duration>
+          <className>PhantomJS 1.9.0 (Linux).OrdinalSwingHandler initialize</className>
+          <testName>should not be the final state</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.001</duration>
+          <className>PhantomJS 1.9.0 (Linux).OrdinalSwingHandler initialize</className>
+          <testName>should have the worst alternative as reference</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.001</duration>
+          <className>PhantomJS 1.9.0 (Linux).OrdinalSwingHandler initialize</className>
+          <testName>should have a single criterion improved from worst to best in each choice</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.001</duration>
+          <className>PhantomJS 1.9.0 (Linux).OrdinalSwingHandler initialize</className>
+          <testName>should have an empty order</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.004</duration>
+          <className>PhantomJS 1.9.0 (Linux).OrdinalSwingHandler nextState</className>
+          <testName>should not go to next step without valid selection</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.002</duration>
+          <className>PhantomJS 1.9.0 (Linux).OrdinalSwingHandler nextState</className>
+          <testName>should have the choice as new reference</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.001</duration>
+          <className>PhantomJS 1.9.0 (Linux).OrdinalSwingHandler nextState</className>
+          <testName>should not contain previous choice</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.002</duration>
+          <className>PhantomJS 1.9.0 (Linux).OrdinalSwingHandler nextState</className>
+          <testName>should improve previous choice on all choices</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.001</duration>
+          <className>PhantomJS 1.9.0 (Linux).OrdinalSwingHandler nextState</className>
+          <testName>should push the choice onto the order</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.002</duration>
+          <className>PhantomJS 1.9.0 (Linux).OrdinalSwingHandler nextState</className>
+          <testName>should finish when only a single choice left</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.001</duration>
+          <className>PhantomJS 1.9.0 (Linux).OrdinalSwingHandler standardize</className>
+          <testName>should rewrite the order to separate statements</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.001</duration>
+          <className>PhantomJS 1.9.0 (Linux).OrdinalSwingHandler standardize</className>
+          <testName>adds missing preference data</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.001</duration>
+          <className>PhantomJS 1.9.0 (Linux).PartialValueFunctionHandler Create Linear Partial Value function</className>
+          <testName>determines worst values</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.001</duration>
+          <className>PhantomJS 1.9.0 (Linux).PartialValueFunctionHandler Create Linear Partial Value function</className>
+          <testName>determines best values</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.0</duration>
+          <className>PhantomJS 1.9.0 (Linux).PartialValueFunctionHandler Create Linear Partial Value function</className>
+          <testName>defines the partial value function</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.001</duration>
+          <className>PhantomJS 1.9.0 (Linux).PartialValueFunctionHandler Create Linear Partial Value function</className>
+          <testName>defines the inverse of the partial value function</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.001</duration>
+          <className>PhantomJS 1.9.0 (Linux).PartialValueFunctionHandler Create Piecewise Partial Value function</className>
+          <testName>determines worst values</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.0</duration>
+          <className>PhantomJS 1.9.0 (Linux).PartialValueFunctionHandler Create Piecewise Partial Value function</className>
+          <testName>determines best values</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.0</duration>
+          <className>PhantomJS 1.9.0 (Linux).PartialValueFunctionHandler Create Piecewise Partial Value function</className>
+          <testName>defines the partial value function</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.001</duration>
+          <className>PhantomJS 1.9.0 (Linux).PartialValueFunctionHandler Create Piecewise Partial Value function</className>
+          <testName>defines the inverse of the partial value function</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.001</duration>
+          <className>PhantomJS 1.9.0 (Linux).PartialValueFunctionHandler nextState()</className>
+          <testName>has subType &apos;elicit cutoffs&apos; when there are piecewise PVF&apos;s without cutoffs</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.006</duration>
+          <className>PhantomJS 1.9.0 (Linux).PartialValueFunctionHandler nextState()</className>
+          <testName>should elicit values after cutoffs</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.001</duration>
+          <className>PhantomJS 1.9.0 (Linux).PartialValueFunctionHandler nextState()</className>
+          <testName>should be able to save when done</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.002</duration>
+          <className>PhantomJS 1.9.0 (Linux).PartialValueFunctionHandler nextState()</className>
+          <testName>should elicit values before transitioning to next criterion</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+      </cases>
+    </suite>
+  </suites>
+  <duration>0.068999976</duration>
+  <keepLongStdio>false</keepLongStdio>
+</result>

@@ -1,0 +1,32 @@
+Started by user [8mha:AAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzOEgYu/dLi1CL9vNKcHACFIKlWvwAAAA==[0manonymous
+[EnvInject] - Loading node environment variables.
+Building in workspace /home/jenkins/.jenkins/jobs/JUnit/workspace
+ERROR: Processing failed due to a bug in the code. Please report this to jenkinsci-users@googlegroups.com
+[8mha:AAAAWB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P08vOT+vOD8nVc8DzHWtSE4tKMnMz/PLL0ldFVf2c+b/lb5MDAwVRQxSaBqcITRIIQMEMIIUFgAAckCEiWAAAAA=[0mjava.lang.IllegalArgumentException: /usr/bin doesn't have a 'lib' subdirectory - thus cannot be a valid maven installation!
+	at hudson.maven.MavenEmbedderUtils.buildClassRealm(MavenEmbedderUtils.java:83)
+	at hudson.maven.MavenEmbedderUtils.getMavenVersion(MavenEmbedderUtils.java:188)
+	at hudson.maven.MavenVersionCallable.call(MavenVersionCallable.java:70)
+	at hudson.maven.MavenVersionCallable.call(MavenVersionCallable.java:42)
+	at hudson.FilePath.act(FilePath.java:1006)
+	at hudson.maven.MavenModuleSetBuild$MavenModuleSetBuildExecution.doRun(MavenModuleSetBuild.java:617)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.run(AbstractBuild.java:566)
+	at hudson.model.Run.execute(Run.java:1678)
+	at hudson.maven.MavenModuleSetBuild.run(MavenModuleSetBuild.java:519)
+	at hudson.model.ResourceController.execute(ResourceController.java:88)
+	at hudson.model.Executor.run(Executor.java:231)
+project=hudson.maven.MavenModuleSet@490fdd63[JUnit]
+project.getModules()=[]
+project.getRootModule()=null
+FATAL: /usr/bin doesn't have a 'lib' subdirectory - thus cannot be a valid maven installation!
+[8mha:AAAAWB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P08vOT+vOD8nVc8DzHWtSE4tKMnMz/PLL0ldFVf2c+b/lb5MDAwVRQxSaBqcITRIIQMEMIIUFgAAckCEiWAAAAA=[0mjava.lang.IllegalArgumentException: /usr/bin doesn't have a 'lib' subdirectory - thus cannot be a valid maven installation!
+	at hudson.maven.MavenEmbedderUtils.buildClassRealm(MavenEmbedderUtils.java:83)
+	at hudson.maven.MavenEmbedderUtils.getMavenVersion(MavenEmbedderUtils.java:188)
+	at hudson.maven.MavenVersionCallable.call(MavenVersionCallable.java:70)
+	at hudson.maven.MavenVersionCallable.call(MavenVersionCallable.java:42)
+	at hudson.FilePath.act(FilePath.java:1006)
+	at hudson.maven.MavenModuleSetBuild$MavenModuleSetBuildExecution.doRun(MavenModuleSetBuild.java:617)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.run(AbstractBuild.java:566)
+	at hudson.model.Run.execute(Run.java:1678)
+	at hudson.maven.MavenModuleSetBuild.run(MavenModuleSetBuild.java:519)
+	at hudson.model.ResourceController.execute(ResourceController.java:88)
+	at hudson.model.Executor.run(Executor.java:231)
