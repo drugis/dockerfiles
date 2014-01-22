@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# make sure tomcat is killed when this process is
-trap "kill -- -$BASHPID" EXIT
-
 # remove old unpack
 rm -rf /var/lib/tomcat7/webapps/ROOT
 
