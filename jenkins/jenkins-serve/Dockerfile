@@ -21,10 +21,14 @@ RUN npm install -g karma
 RUN npm install -g karma-qunit --save-dev
 RUN npm install -g karma-junit-reporter --save-dev
 
+RUN npm install -g protractor
+ADD https://selenium.googlecode.com/files/selenium-server-standalone-2.39.0.jar /opt/selenium-server-standalone-2.39.0.jar
+
 ADD http://mirrors.jenkins-ci.org/war/1.548/jenkins.war /opt/jenkins.war
 RUN chmod 644 /opt/jenkins.war
 ADD run /usr/local/bin/run
 RUN useradd jenkins
+RUN chown jenkins /opt/selenium-server-standalone-2.39.0.jar
 
 ENV MCDAWEB_DB_DRIVER org.h2.Driver
 ENV MCDAWEB_DB_PASSWORD sa
