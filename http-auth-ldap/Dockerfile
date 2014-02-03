@@ -11,6 +11,7 @@ ADD lighttpd/05-auth-ldap.conf /etc/lighttpd/conf-enabled/05-auth-ldap.conf
 ADD ldap-ca.pem /etc/lighttpd/ldap-ca.pem
 RUN echo "#!/bin/bash\n/usr/sbin/lighttpd -f /etc/lighttpd/lighttpd.conf -D" >/usr/local/bin/run-httpd
 RUN chmod +x /usr/local/bin/run-httpd
+RUN ln -s /etc/lighttpd/conf-available/10-accesslog.conf /etc/lighttpd/conf-enabled/
 
 EXPOSE 80
 
