@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # make sure mailman can access the data
-chown -R root.list /srv/mailman/data /srv/mailman/lists /srv/mailman/private
+chown -R root.list /srv/lists.drugis.org/data /srv/lists.drugis.org/lists /srv/lists.drugis.org/private
 check_perms -f
 
 service exim4 start
