@@ -20,10 +20,12 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y -q nodejs
 RUN npm install -g karma
 RUN npm install -g karma-qunit --save-dev
 RUN npm install -g karma-junit-reporter --save-dev
+RUN npm install -g karma-coverage --save-dev
+RUN npm install -g bower --save-dev
+RUN npm install -g istanbul --save-dev
+RUN npm install -g protractor --save-dev
 
-RUN npm install -g protractor
 ADD https://selenium.googlecode.com/files/selenium-server-standalone-2.39.0.jar /opt/selenium-server-standalone-2.39.0.jar
-
 ADD http://mirrors.jenkins-ci.org/war/1.548/jenkins.war /opt/jenkins.war
 RUN chmod 644 /opt/jenkins.war
 ADD run /usr/local/bin/run
