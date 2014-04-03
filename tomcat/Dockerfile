@@ -4,12 +4,19 @@ RUN sed -i 's/main$/main universe/' /etc/apt/sources.list
 RUN apt-get update
 RUN DEBIAN_FRONTEND=noninteractive apt-get upgrade -y
 
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y -q tomcat7
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y -q curl
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y -q openssh-server
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y -q supervisor
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y -q fakeroot
+RUN DEBIAN_FRONTEND=noninteractive fakeroot apt-get install -y -q openjdk-7-jdk
 
-RUN curl "http://jdbc.postgresql.org/download/postgresql-9.3-1100.jdbc4.jar" -o /usr/share/tomcat7/lib/postgresql-9.3-1100.jdbc4.jar
+RUN curl "http://apache.hippo.nl/tomcat/tomcat-7/v7.0.53/bin/apache-tomcat-7.0.53.tar.gz" -o /tmp/tomcat7.tar.gz
+
+RUN tar -xzf /tmp/tomcat7.tar.gz -C /tmp
+RUN mkdir -p /usr/share/tomcat7
+RUN mv /tmp/apache-tomcat-7.0.53/* /usr/share/tomcat7
+
+## memo: remove webapps
 
 ## supervisor configuration
 ADD supervisord.conf /etc/supervisor/supervisord.conf
@@ -19,8 +26,8 @@ RUN mkdir -p /var/run/supervisor
 ADD tomcat7-run.sh /usr/local/bin/tomcat7-run
 RUN chown root.root /usr/local/bin/tomcat7-run
 RUN chmod +x /usr/local/bin/tomcat7-run
-ADD server.xml /etc/tomcat7/
-RUN chown root.root /etc/tomcat7/server.xml
+ADD server.xml /usr/share/tomcat7/conf
+RUN chown root.root /usr/share/tomcat7/conf/server.xml
 
 ## sshd config
 # work-around for http://gaijin-nippon.blogspot.nl/2013/07/audit-on-lxc-host.html
