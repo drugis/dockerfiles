@@ -26,7 +26,7 @@ RUN mkdir -p /var/run/supervisor
 ADD tomcat7-run.sh /usr/local/bin/tomcat7-run
 RUN chown root.root /usr/local/bin/tomcat7-run
 RUN chmod +x /usr/local/bin/tomcat7-run
-ADD server.xml /usr/share/tomcat7/conf
+ADD server.xml /usr/share/tomcat7/conf/server.xml
 RUN chown root.root /usr/share/tomcat7/conf/server.xml
 
 ## sshd config
