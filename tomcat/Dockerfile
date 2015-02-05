@@ -18,9 +18,10 @@ RUN mv /tmp/apache-tomcat-7.0.57/* /usr/share/tomcat7
 ## tomcat configuration
 RUN mkdir /etc/service/tomcat
 ADD tomcat7-run.sh /etc/service/tomcat/run
+ADD ROOT.war /usr/share/tomcat7/webapps/ROOT.war
 RUN chmod +x /etc/service/tomcat/run
 ADD server.xml /usr/share/tomcat7/conf/server.xml
 RUN chown root.root /usr/share/tomcat7/conf/server.xml
 
-EXPOSE 22 8080
+EXPOSE 8080
 CMD ["/sbin/my_init"]
