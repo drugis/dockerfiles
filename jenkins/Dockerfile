@@ -3,7 +3,12 @@ FROM phusion/baseimage
 RUN echo deb http://archive.ubuntu.com/ubuntu precise universe >> /etc/apt/sources.list
 RUN apt-get update && apt-get clean
 RUN apt-get update && apt-get install -y wget git curl zip
-RUN apt-get install -y openjdk-7-jre
+
+RUN apt-get install -y openjdk-7-jdk
+
+# Define commonly used JAVA_HOME variable
+ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64
+
 RUN apt-get install -y -q git
 RUN apt-get install -y -q maven
 RUN apt-get install -y -q firefox
@@ -31,8 +36,9 @@ RUN npm install -g protractor --save-dev
 
 # Jenkins home directoy is a volume, so configuration and build history
 # can be persisted and survive image upgrades
-VOLUME /var/jenkins_home
+# VOLUME /var/jenkins_home
 
+RUN mkdir -p /var/jenkins_home
 ENV JENKINS_HOME /var/jenkins_home
 
 RUN useradd -d "$JENKINS_HOME" -u 1000 -m -s /bin/bash jenkins
@@ -40,9 +46,7 @@ RUN useradd -d "$JENKINS_HOME" -u 1000 -m -s /bin/bash jenkins
 # `/usr/share/jenkins/ref/` contains all reference configuration we want
 # to set on a fresh new installation. Use it to bundle additional plugins
 # or config file with your custom jenkins Docker image.
-RUN mkdir -p /usr/share/jenkins/ref/init.groovy.d
-
-COPY init.groovy /usr/share/jenkins/ref/init.groovy.d/tcp-slave-agent-port.groovy
+RUN mkdir -p /usr/share/jenkins/ref
 
 ENV JENKINS_VERSION 1.596.2
 ENV JENKINS_SHA 96ee85602a41d68c164fb54d4796be5d1d9cc5d0

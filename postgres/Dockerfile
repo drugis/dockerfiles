@@ -8,11 +8,11 @@ RUN locale-gen en_US.UTF-8
 RUN update-locale LANG=en_US.UTF-8
 
 # install postgres
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y -q postgresql-9.1 postgresql-contrib-9.1
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y -q postgresql-9.3 postgresql-contrib-9.3
 
 # listen on all interfaces
-RUN echo "listen_addresses = '*'" >>/etc/postgresql/9.1/main/postgresql.conf
-RUN echo 'host all all 0.0.0.0/0 md5' >>/etc/postgresql/9.1/main/pg_hba.conf
+RUN echo "listen_addresses = '*'" >>/etc/postgresql/9.3/main/postgresql.conf
+RUN echo 'host all all 0.0.0.0/0 md5' >>/etc/postgresql/9.3/main/pg_hba.conf
 
 ADD run-postgresql.sh /usr/local/bin/run-postgresql
 RUN chown root.root /usr/local/bin/run-postgresql
