@@ -27,6 +27,7 @@ RUN apt-get install -y -q nodejs
 
 
 RUN npm install -g karma
+RUN npm install -g karma-cli
 RUN npm install -g karma-qunit --save-dev
 RUN npm install -g karma-junit-reporter --save-dev
 RUN npm install -g karma-coverage --save-dev
