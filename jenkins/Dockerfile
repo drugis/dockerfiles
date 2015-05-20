@@ -34,6 +34,11 @@ RUN npm install -g karma-coverage --save-dev
 RUN npm install -g bower --save-dev
 RUN npm install -g istanbul --save-dev
 RUN npm install -g protractor --save-dev
+RUN npm install -g karma-chrome-launcher --save-dev
+RUN npm install -g karma-phantomjs-launcher --save-dev
+RUN npm install -g karma-jasmine --save-dev
+RUN npm install -g karma-requirejs --save-dev
+
 
 # Jenkins home directoy is a volume, so configuration and build history
 # can be persisted and survive image upgrades
