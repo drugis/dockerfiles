@@ -64,6 +64,7 @@ RUN curl -fL http://mirrors.jenkins-ci.org/war-stable/$JENKINS_VERSION/jenkins.w
 
 ENV JENKINS_UC https://updates.jenkins-ci.org
 RUN chown -R jenkins "$JENKINS_HOME" /usr/share/jenkins/ref
+RUN chown -R jenkins /usr/lib/node_modules
 
 # for main web interface:
 EXPOSE 8080
