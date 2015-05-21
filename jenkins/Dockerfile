@@ -15,31 +15,6 @@ RUN apt-get install -y -q firefox
 RUN apt-get install -y -q chromium-browser
 RUN apt-get install -y -q phantomjs
 
-
-## Special node repo to install non-ubuntu nodejs that includes npm
-RUN wget -q -O- "https://chrislea.com/gpgkey.txt" | apt-key add -
-RUN echo "deb http://ppa.launchpad.net/chris-lea/node.js/ubuntu saucy main" > /etc/apt/sources.list.d/chris-lea-node_js-saucy.list
-RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys B9316A7BC7917B12
-RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get clean
-
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y -q nodejs
-RUN apt-get install -y -q nodejs
-
-
-RUN npm install -g karma
-RUN npm install -g karma-cli
-RUN npm install -g karma-qunit --save-dev
-RUN npm install -g karma-junit-reporter --save-dev
-RUN npm install -g karma-coverage --save-dev
-RUN npm install -g bower --save-dev
-RUN npm install -g istanbul --save-dev
-RUN npm install -g protractor --save-dev
-RUN npm install -g karma-chrome-launcher --save-dev
-RUN npm install -g karma-phantomjs-launcher --save-dev
-RUN npm install -g karma-jasmine --save-dev
-RUN npm install -g karma-requirejs --save-dev
-
-
 # Jenkins home directoy is a volume, so configuration and build history
 # can be persisted and survive image upgrades
 # VOLUME /var/jenkins_home
@@ -64,8 +39,6 @@ RUN curl -fL http://mirrors.jenkins-ci.org/war-stable/$JENKINS_VERSION/jenkins.w
 
 ENV JENKINS_UC https://updates.jenkins-ci.org
 RUN chown -R jenkins "$JENKINS_HOME" /usr/share/jenkins/ref
-RUN chown -R jenkins /usr/lib/node_modules
-RUN chown -R jenkins /root
 
 # for main web interface:
 EXPOSE 8080
