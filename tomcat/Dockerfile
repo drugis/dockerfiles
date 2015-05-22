@@ -8,7 +8,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y -q curl
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y -q fakeroot
 RUN DEBIAN_FRONTEND=noninteractive fakeroot apt-get install -y -q openjdk-7-jdk
 
-RUN curl "http://apache.hippo.nl/tomcat/tomcat-7/v7.0.57/bin/apache-tomcat-7.0.57.tar.gz" -o /tmp/tomcat7.tar.gz
+RUN curl "http://apache.hippo.nl/tomcat/tomcat-7/v7.0.62/bin/apache-tomcat-7.0.62.tar.gz" -o /tmp/tomcat7.tar.gz
+
 
 RUN tar -xzf /tmp/tomcat7.tar.gz -C /tmp
 RUN rm -rf /tmp/apache-tomcat-7.0.57/webapps/*
