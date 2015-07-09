@@ -14,7 +14,11 @@ RUN apt-get install -y -q maven
 RUN apt-get install -y -q firefox
 RUN apt-get install -y -q chromium-browser
 RUN apt-get install -y -q phantomjs
-
+RUN apt-get install -y -q r-base-core
+RUN apt-get install -y -q r-base-dev
+RUN apt-get install -y -q r-cran-rjags
+RUN apt-get install -y -q r-cran-xml
+RUN apt-get install -y -q r-cran-plyr
 
 ## Special node repo to install non-ubuntu nodejs that includes npm
 RUN wget -q -O- "https://chrislea.com/gpgkey.txt" | apt-key add -
