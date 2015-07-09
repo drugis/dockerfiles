@@ -20,29 +20,14 @@ RUN apt-get install -y -q r-cran-rjags
 RUN apt-get install -y -q r-cran-xml
 RUN apt-get install -y -q r-cran-plyr
 
-## Special node repo to install non-ubuntu nodejs that includes npm
-RUN wget -q -O- "https://chrislea.com/gpgkey.txt" | apt-key add -
-RUN echo "deb http://ppa.launchpad.net/chris-lea/node.js/ubuntu saucy main" > /etc/apt/sources.list.d/chris-lea-node_js-saucy.list
-RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys B9316A7BC7917B12
-RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get clean
+# Install Node.js and other dependencies
+RUN apt-get update && \
+    apt-get -y install curl && \
+    curl -sL https://deb.nodesource.com/setup | sudo bash - && \
+    apt-get -y install python build-essential nodejs
 
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y -q nodejs
-RUN apt-get install -y -q nodejs
-
-
-RUN npm install -g karma
-RUN npm install -g karma-cli
-RUN npm install -g karma-qunit --save-dev
-RUN npm install -g karma-junit-reporter --save-dev
-RUN npm install -g karma-coverage --save-dev
-RUN npm install -g bower --save-dev
-RUN npm install -g istanbul --save-dev
-RUN npm install -g protractor --save-dev
-RUN npm install -g karma-chrome-launcher --save-dev
-RUN npm install -g karma-phantomjs-launcher --save-dev
-RUN npm install -g karma-jasmine --save-dev
-RUN npm install -g karma-requirejs --save-dev
-
+# Global NPM installs
+RUN npm install --silent -g grunt-cli bower karma karma-cli karma-qunit karma-junit-reporter karma-coverage istanbul protractor karma-chrome-launcher karma-phantomjs-launcher karma-jasmine karma-requirejs
 
 # Jenkins home directoy is a volume, so configuration and build history
 # can be persisted and survive image upgrades
@@ -51,7 +36,7 @@ RUN npm install -g karma-requirejs --save-dev
 RUN mkdir -p /var/jenkins_home
 ENV JENKINS_HOME /var/jenkins_home
 
-RUN useradd -d "$JENKINS_HOME" -u 1000 -m -s /bin/bash jenkins
+# RUN useradd -d "$JENKINS_HOME" -u 1000 -m -s /bin/bash jenkins
 
 # `/usr/share/jenkins/ref/` contains all reference configuration we want
 # to set on a fresh new installation. Use it to bundle additional plugins
@@ -67,8 +52,9 @@ RUN curl -fL http://mirrors.jenkins-ci.org/war-stable/$JENKINS_VERSION/jenkins.w
   && echo "$JENKINS_SHA /usr/share/jenkins/jenkins.war" | sha1sum -c -
 
 ENV JENKINS_UC https://updates.jenkins-ci.org
-RUN chown -R jenkins "$JENKINS_HOME" /usr/share/jenkins/ref
-
+#RUN chown -R jenkins "$JENKINS_HOME" /usr/share/jenkins/ref
+#RUN chown -R jenkins /usr/lib/node_modules
+#RUN chown -R jenkins /root
 # for main web interface:
 EXPOSE 8080
 
@@ -76,9 +62,9 @@ EXPOSE 8080
 EXPOSE 50000
 
 ENV COPY_REFERENCE_FILE_LOG /var/log/copy_reference_file.log
-RUN touch $COPY_REFERENCE_FILE_LOG && chown jenkins.jenkins $COPY_REFERENCE_FILE_LOG
+RUN touch $COPY_REFERENCE_FILE_LOG # && chown jenkins.jenkins $COPY_REFERENCE_FILE_LOG
 
-USER jenkins
+# USER jenkins
 
 COPY jenkins.sh /usr/local/bin/jenkins.sh
 
