@@ -1,6 +1,6 @@
 FROM phusion/baseimage
 
-RUN echo deb http://archive.ubuntu.com/ubuntu precise universe >> /etc/apt/sources.list
+RUN echo deb http://archive.ubuntu.com/ubuntu trusty universe >> /etc/apt/sources.list
 RUN apt-get update && apt-get clean
 RUN apt-get update && apt-get install -y wget git curl zip
 
@@ -13,7 +13,6 @@ RUN apt-get install -y -q git
 RUN apt-get install -y -q maven
 RUN apt-get install -y -q firefox
 RUN apt-get install -y -q chromium-browser
-RUN apt-get install -y -q phantomjs
 RUN apt-get install -y -q r-base-core
 RUN apt-get install -y -q r-base-dev
 RUN apt-get install -y -q r-cran-rjags
