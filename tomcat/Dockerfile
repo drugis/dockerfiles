@@ -14,7 +14,7 @@ RUN curl "http://apache.hippo.nl/tomcat/tomcat-7/v7.0.63/bin/apache-tomcat-7.0.6
 RUN tar -xzf /tmp/tomcat7.tar.gz -C /tmp
 RUN rm -rf /tmp/apache-tomcat-7.0.62/webapps/*
 RUN mkdir -p /usr/share/tomcat7
-RUN mv /tmp/apache-tomcat-7.0.62/* /usr/share/tomcat7
+RUN mv /tmp/apache-tomcat-7.0.63/* /usr/share/tomcat7
 
 ## tomcat configuration
 RUN mkdir /etc/service/tomcat
