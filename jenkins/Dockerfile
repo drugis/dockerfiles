@@ -1,7 +1,7 @@
 FROM phusion/baseimage
 
-RUN echo deb http://archive.ubuntu.com/ubuntu trusty universe >> /etc/apt/sources.list
-RUN apt-get update && apt-get clean
+RUN echo http://cran.rstudio.com/bin/linux/ubuntu trusty/ >> /etc/apt/sources.list
+RUN apt-get update && apt-get clean && apt-get upgrade -y
 RUN apt-get update && apt-get install -y wget git curl zip
 
 RUN apt-get install -y openjdk-7-jdk
@@ -13,6 +13,7 @@ RUN apt-get install -y -q git
 RUN apt-get install -y -q maven
 RUN apt-get install -y -q firefox
 RUN apt-get install -y -q chromium-browser
+RUN apt-get install -y -q libcurl-devel
 
 # Install Node.js and other dependencies
 RUN apt-get update && \
@@ -23,14 +24,8 @@ RUN apt-get update && \
 # Global NPM installs
 RUN npm install -g grunt-cli bower karma karma-cli karma-qunit karma-junit-reporter karma-coverage istanbul protractor karma-chrome-launcher karma-phantomjs-launcher karma-jasmine karma-requirejs
 
-# Jenkins home directoy is a volume, so configuration and build history
-# can be persisted and survive image upgrades
-# VOLUME /var/jenkins_home
-
 RUN mkdir -p /var/jenkins_home
 ENV JENKINS_HOME /var/jenkins_home
-
-# RUN useradd -d "$JENKINS_HOME" -u 1000 -m -s /bin/bash jenkins
 
 # `/usr/share/jenkins/ref/` contains all reference configuration we want
 # to set on a fresh new installation. Use it to bundle additional plugins
@@ -58,14 +53,15 @@ EXPOSE 50000
 ENV COPY_REFERENCE_FILE_LOG /var/log/copy_reference_file.log
 RUN touch $COPY_REFERENCE_FILE_LOG # && chown jenkins.jenkins $COPY_REFERENCE_FILE_LOG
 
-# USER jenkins
-
 COPY jenkins.sh /usr/local/bin/jenkins.sh
 
 # from a derived Dockerfile, can use `RUN plugin.sh active.txt` to setup /usr/share/jenkins/ref/plugins from a support bundle
 COPY plugins.sh /usr/local/bin/plugins.sh
 
 # R for R tests
+RUN apt-get install -y -q libcurl4-openssl-dev # needed for devtools package
+RUN apt-get install -y -q libxml2-dev # needed for devtools package
+RUN apt-get install -y -q libssl-dev # needed for devtools package
 RUN apt-get install -y -q r-base-core
 RUN apt-get install -y -q r-base
 RUN apt-get install -y -q r-base-dev
@@ -79,6 +75,7 @@ COPY testthat.tar.gz testthat.tar.gz
 
 RUN R -e 'install.packages("testthat.tar.gz", repos=NULL, type="source"); if (!require("testthat")) quit(save="no", status=8)'
 RUN R -e 'install.packages("igraph", repos="http://cran.rstudio.com/"); if (!require("igraph")) quit(save="no", status=8)'
+RUN R -e 'install.packages("devtools", repos="http://cran.rstudio.com/"); if (!require("igraph")) quit(save="no", status=8)'
 RUN R -e 'install.packages("meta", repos="http://cran.rstudio.com/"); if (!require("meta")) quit(save="no", status=8)'
 RUN R -e 'install.packages("gemtc_0.7.tar.gz", repos=NULL, type="source"); if (!require("gemtc")) quit(save="no", status=8)'
 
