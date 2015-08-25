@@ -13,11 +13,6 @@ RUN apt-get install -y -q git
 RUN apt-get install -y -q maven
 RUN apt-get install -y -q firefox
 RUN apt-get install -y -q chromium-browser
-RUN apt-get install -y -q r-base-core
-RUN apt-get install -y -q r-base-dev
-RUN apt-get install -y -q r-cran-rjags
-RUN apt-get install -y -q r-cran-xml
-RUN apt-get install -y -q r-cran-plyr
 
 # Install Node.js and other dependencies
 RUN apt-get update && \
@@ -26,7 +21,7 @@ RUN apt-get update && \
     apt-get -y install python build-essential nodejs
 
 # Global NPM installs
-RUN npm install --silent -g grunt-cli bower karma karma-cli karma-qunit karma-junit-reporter karma-coverage istanbul protractor karma-chrome-launcher karma-phantomjs-launcher karma-jasmine karma-requirejs
+RUN npm install -g grunt-cli bower karma karma-cli karma-qunit karma-junit-reporter karma-coverage istanbul protractor karma-chrome-launcher karma-phantomjs-launcher karma-jasmine karma-requirejs
 
 # Jenkins home directoy is a volume, so configuration and build history
 # can be persisted and survive image upgrades
@@ -69,6 +64,24 @@ COPY jenkins.sh /usr/local/bin/jenkins.sh
 
 # from a derived Dockerfile, can use `RUN plugin.sh active.txt` to setup /usr/share/jenkins/ref/plugins from a support bundle
 COPY plugins.sh /usr/local/bin/plugins.sh
+
+# R for R tests
+RUN apt-get install -y -q r-base-core
+RUN apt-get install -y -q r-base
+RUN apt-get install -y -q r-base-dev
+RUN apt-get install -y -q r-cran-rjags
+RUN apt-get install -y -q r-cran-xml
+RUN apt-get install -y -q r-cran-plyr
+RUN apt-get install -y -q r-cran-ggplot2
+
+COPY gemtc_0.7.tar.gz gemtc_0.7.tar.gz
+COPY testthat.tar.gz testthat.tar.gz
+
+RUN R -e 'install.packages("testthat.tar.gz", repos=NULL, type="source"); if (!require("testthat")) quit(save="no", status=8)'
+RUN R -e 'install.packages("igraph", repos="http://cran.rstudio.com/"); if (!require("igraph")) quit(save="no", status=8)'
+RUN R -e 'install.packages("meta", repos="http://cran.rstudio.com/"); if (!require("meta")) quit(save="no", status=8)'
+RUN R -e 'install.packages("gemtc_0.7.tar.gz", repos=NULL, type="source"); if (!require("gemtc")) quit(save="no", status=8)'
+
 
 ENV MCDAWEB_DB_DRIVER org.h2.Driver
 ENV MCDAWEB_DB_PASSWORD sa
