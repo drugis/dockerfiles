@@ -6,10 +6,10 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get upgrade -y
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y -q fakeroot
 RUN DEBIAN_FRONTEND=noninteractive fakeroot apt-get install -y -q openjdk-7-jdk
 
-ADD http://apache.proserve.nl/jena/binaries/apache-jena-2.12.1.tar.gz /tmp/jena.tar.gz 
+ADD https://archive.apache.org/dist/jena/binaries/apache-jena-2.12.1.tar.gz /tmp/jena.tar.gz 
 RUN tar -xzf /tmp/jena.tar.gz -C /usr/share
 
-ADD http://apache.proserve.nl/jena/binaries/jena-fuseki-1.1.1-distribution.tar.gz  /tmp/fuseki.tar.gz
+ADD https://archive.apache.org/dist/jena/binaries/jena-fuseki-1.1.1-distribution.tar.gz  /tmp/fuseki.tar.gz
 RUN tar -xzf /tmp/fuseki.tar.gz -C /usr/share
 
 ENV JENA_HOME /usr/share/apache-jena-2.12.1
