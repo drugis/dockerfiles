@@ -1,20 +1,21 @@
-FROM phusion/baseimage:0.9.16
+FROM phusion/baseimage
 
 RUN sed -i 's/main$/main universe/' /etc/apt/sources.list
+RUN add-apt-repository ppa:openjdk-r/ppa
 RUN apt-get update
 RUN DEBIAN_FRONTEND=noninteractive apt-get upgrade -y
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y -q curl
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y -q fakeroot
-RUN DEBIAN_FRONTEND=noninteractive fakeroot apt-get install -y -q openjdk-7-jdk
+RUN DEBIAN_FRONTEND=noninteractive fakeroot apt-get install -y -q openjdk-8-jdk
 
-RUN curl "http://apache.hippo.nl/tomcat/tomcat-7/v7.0.63/bin/apache-tomcat-7.0.63.tar.gz" -o /tmp/tomcat7.tar.gz
+RUN curl "http://archive.apache.org/dist/tomcat/tomcat-7/v7.0.64/bin/apache-tomcat-7.0.64.tar.gz" -o /tmp/tomcat7.tar.gz
 
 
 RUN tar -xzf /tmp/tomcat7.tar.gz -C /tmp
-RUN rm -rf /tmp/apache-tomcat-7.0.63/webapps/*
+RUN rm -rf /tmp/apache-tomcat-7.0.64/webapps/*
 RUN mkdir -p /usr/share/tomcat7
-RUN mv /tmp/apache-tomcat-7.0.63/* /usr/share/tomcat7
+RUN mv /tmp/apache-tomcat-7.0.64/* /usr/share/tomcat7
 
 ## tomcat configuration
 RUN mkdir /etc/service/tomcat
