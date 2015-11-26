@@ -1,13 +1,14 @@
 FROM phusion/baseimage
 
 RUN echo http://cran.rstudio.com/bin/linux/ubuntu trusty/ >> /etc/apt/sources.list
+RUN add-apt-repository ppa:openjdk-r/ppa
 RUN apt-get update && apt-get clean && apt-get upgrade -y
 RUN apt-get update && apt-get install -y wget git curl zip
 
-RUN apt-get install -y openjdk-7-jdk
+RUN apt-get install -y openjdk-8-jdk
 
 # Define commonly used JAVA_HOME variable
-ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64
+ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64cdcdcd
 
 RUN apt-get install -y -q git
 RUN apt-get install -y -q maven
