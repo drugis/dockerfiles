@@ -17,7 +17,9 @@
       URIEncoding="UTF-8"
       proxyName="${tomcatProxyName}"
       proxyPort="${tomcatProxyPort}"
-      scheme="${tomcatProxyScheme}" />
+      scheme="${tomcatProxyScheme}"
+      maxHttpHeaderSize="65536"
+      maxPostSize="20971520" />
 
     <Engine name="Catalina" defaultHost="localhost">
       <Host name="localhost"  appBase="webapps"
